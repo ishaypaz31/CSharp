@@ -1,0 +1,93 @@
+ 1.creat a new table
+delete table
+
+2.Change the table name from sopping to shop
+return the original name (shopping)
+
+3. insert new datato table
+ID 1,NAME: Avokado, ACOUNT: 5
+ID 2,NAME: Milk, ACOUNT: 2
+ID 3,NAME: Bread, ACOUNT: 3
+ID 4,NAME: Chocolate, ACOUNT: 8
+ID 5,NAME: Bamba, ACOUNT: 5
+ID 6 ,NAME: Orange, ACOUNT: 10
+
+4.show all column form shopping
+
+5.show ID and NAME from table SHOPPING
+
+6.
+show all amount above 5
+show all amount where is equal to 2
+show all name where is like "bamba"
+
+7.delete from table where name like 'Orange';
+
+8.
+change 'Bamba' to Bisli
+change milk amount to 1
+
+9.
+add column to SHOPPING
+
+10.
+update SHOPPING
+ID 1,NAME: Avokado, ACOUNT: 5,  maavar 6
+ID 2,NAME: Milk, ACOUNT: 2,  maavar 3
+ID 3,NAME: Bread, ACOUNT: 3,  maavar 12
+ID 4,NAME: Chocolate, ACOUNT: 8,  maavar 8
+ID 5,NAME: Bamba, ACOUNT: 5,  maavar 5
+
+11.
+show all SHOPPING where AMOUNT > 5 AND maavar > 5
+show all SHOPPING where maavar between 3 AND 5
+
+12.
+Sorted in ascending order
+Sorted in descending order
+
+13.
+create table books with id and name 
+ID 1,NAME: 'SQL PROGRAMMING
+ID 2,NAME:CSHARP PROGRAMMING
+delete all from books
+
+
+14. 
+Count the number of lines
+show MAX amount from shopping
+show average amount from shopping
+show minimum amount from shopping
+
+15.
+ID 1,NAME: Avokado, ACOUNT: 5 maavar 6
+ID 2,NAME: Milk, ACOUNT: 2 maavar 3
+ID 3,NAME: Bread, ACOUNT: 3 maavar 12
+ID 4,NAME: Chocolate, ACOUNT: 8 maavar 8
+ID 5,NAME: Bamba, ACOUNT: 5 maavar 5
+ID 6 ,NAME: Orange, ACOUNT: 10
+ID 7 ,NAME: OnionsACOUNT: 3, maarav 6 
+ID 8 ,NAME: Orio, ACOUNT: 1 , maarav 8 
+maarav Sorted in ascending order
+
+
+16.
+show all from shopping and change the ID to secret
+
+17.
+maarav 6 count 2
+maarav 8 count 2
+
+18.
+Displays all columns from the two selected tables
+
+19
+COUNT price unit and mount 
+
+20
+ID 3 NAME Bread AMOUNT 3 maavar 12 price 12
+
+21
+
+SELECT avg(GRADE) from GRADE
+
