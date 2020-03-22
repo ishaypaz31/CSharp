@@ -1,65 +1,70 @@
- 1.creat a new table
-delete table
 
-2.Change the table name from sopping to shop
-return the original name (shopping)
+1.CREATE TABLE shopping (id INTEGER PRIMARY KEY, name TEXT, amount
+INTEGER); //creat a new table
+DROP TABLE shopping //delete table
 
-3. insert new datato table
-ID 1,NAME: Avokado, ACOUNT: 5
-ID 2,NAME: Milk, ACOUNT: 2
-ID 3,NAME: Bread, ACOUNT: 3
-ID 4,NAME: Chocolate, ACOUNT: 8
-ID 5,NAME: Bamba, ACOUNT: 5
-ID 6 ,NAME: Orange, ACOUNT: 10
 
-4.show all column form shopping
+2.ALTER table shopping RENAME to shopp //Change the table name from shopping to shop
+ALTER table shopp RENAME to shopping //return the original name (shopping)
 
-5.show ID and NAME from table SHOPPING
+3.Insert rows into table:
+INSERT INTO shopping VALUES (1, 'Avokado', 5); //ID 1,NAME: Avokado, ACOUNT: 5
+INSERT INTO shopping VALUES (2, 'Milk', 2); //ID 2,NAME: Milk, ACOUNT: 2
+INSERT INTO shopping VALUES (3, 'Bread', 3); //ID 3,NAME: Bread, ACOUNT: 3
+INSERT INTO shopping VALUES (4, 'Chocolate', 8); //ID 4,NAME: Chocolate, ACOUNT: 8
+INSERT INTO shopping VALUES (5, 'Bamba', 5);//ID 5,NAME: Bamba, ACOUNT: 5
+INSERT INTO shopping VALUES (6, 'Orange', 10);//ID 6 ,NAME: Orange, ACOUNT: 10
+
+4.Display table:
+select * from shopping //show all column in shopping
+
+5.SELECT id, name FROM shopping //show ID and NAME in shopping
 
 6.
-show all amount above 5
-show all amount where is equal to 2
-show all name where is like "bamba"
-
-7.delete from table where name like 'Orange';
-
-8.
-change 'Bamba' to Bisli
-change milk amount to 1
-
-9.
-add column to SHOPPING
-
-10.
-update SHOPPING
-ID 1,NAME: Avokado, ACOUNT: 5,  maavar 6
-ID 2,NAME: Milk, ACOUNT: 2,  maavar 3
-ID 3,NAME: Bread, ACOUNT: 3,  maavar 12
-ID 4,NAME: Chocolate, ACOUNT: 8,  maavar 8
-ID 5,NAME: Bamba, ACOUNT: 5,  maavar 5
-
-11.
-show all SHOPPING where AMOUNT > 5 AND maavar > 5
-show all SHOPPING where maavar between 3 AND 5
-
-12.
-Sorted in ascending order
-Sorted in descending order
-
-13.
-create table books with id and name 
-ID 1,NAME: 'SQL PROGRAMMING
-ID 2,NAME:CSHARP PROGRAMMING
-delete all from books
+SELECT * FROM shopping WHERE amount > 5 //show all amount above 5
+SELECT * FROM shopping WHERE amount = 2 //show all amount where is equal to 2
+SELECT * FROM shopping WHERE name LIKE 'Bamba' //show all name where is like "bamba"
 
 
-14. 
-Count the number of lines
-show MAX amount from shopping
-show average amount from shopping
-show minimum amount from shopping
+7.DELETE from shopping WHERE name like 'Orange'; // delete orange
 
-15.
+
+8.UPDATE shopping SET name = 'Bisli' WHERE name LIKE 'Bamba' //change 'Bamba' to Bisli
+UPDATE shopping SET amount=1 WHERE name LIKE 'Milk' //change milk amount to 1
+
+
+9.ALTER TABLE shopping ADD COLUMN maavar // adding a new column to SHOPPING
+
+
+10.UPDATE shopping SET maavar=6 WHERE id=1; // ID 1,NAME: Avokado, ACOUNT: 5,  maavar 6
+UPDATE shopping SET maavar=3 WHERE id=2; // ID 2,NAME: Milk, ACOUNT: 2,  maavar 3
+UPDATE shopping SET maavar=12 WHERE id=3; // ID 3,NAME: Bread, ACOUNT: 3,  maavar 12
+UPDATE shopping SET maavar=8 WHERE id=4; // ID 4,NAME: Chocolate, ACOUNT: 8,  maavar 8
+UPDATE shopping SET maavar=5 WHERE id=5; //ID 5,NAME: Bamba, ACOUNT: 5,  maavar 5
+
+
+11.SELECT * FROM shopping WHERE amount > 1 AND maavar > 5 // show all SHOPPING where AMOUNT > 5 AND maavar > 5
+SELECT * FROM shopping WHERE maavar BETWEEN 3 AND  // show all SHOPPING where maavar between 3 AND 5
+
+
+12.SELECT * FROM shopping ORDER BY maavar // Sorted in ascending order
+SELECT * FROM shopping ORDER BY maavar DESC // Sorted in descending order
+
+13.CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT); // create table books with id and name
+INSERT INTO books VALUES (1, 'SQL PROGRAMMING'); // ID 1,NAME: 'SQL PROGRAMMING
+INSERT INTO books VALUES (2, 'CSHARP PROGRAMMING'); //ID 2,NAME:CSHARP PROGRAMMING
+DELETE FROM books; // delete all in books
+
+14. SELECT COUNT(*)from shopping //Count the number of lines
+SELECT MAX(amount) from shopping // show MAX amount from shoppi
+SELECT AVG(amount) from shopping //show average amount from shopping
+SELECT MIN(amount) from shopping //show minimum amount from shopping
+
+
+15.INSERT INTO shopping VALUES (6, 'Onions', 3, 6);
+INSERT INTO shopping VALUES (7, 'Orio', 1, 8);
+Select maavar, COUNT(*)FROM shopping GROUP BY maavar
+
 ID 1,NAME: Avokado, ACOUNT: 5 maavar 6
 ID 2,NAME: Milk, ACOUNT: 2 maavar 3
 ID 3,NAME: Bread, ACOUNT: 3 maavar 12
@@ -71,21 +76,36 @@ ID 8 ,NAME: Orio, ACOUNT: 1 , maarav 8
 maarav Sorted in ascending order
 
 
-16.
-show all from shopping and change the ID to secret
+16.SELECT id AS "SECRET", name, amount, maavar FROM shopping // show all from shopping and change the ID to secret
 
-17.
+
+17.Select maavar, COUNT(*)FROM shopping GROUP BY maavar HAVING COUNT(*)>1
 maarav 6 count 2
 maarav 8 count 2
 
 18.
-Displays all columns from the two selected tables
+CREATE TABLE prices (id INTEGER PRIMARY KEY, price INTEGER);
+INSERT INTO prices VALUES (1, 3);
+INSERT INTO prices VALUES (2, 7);
+INSERT INTO prices VALUES (3, 12);
+INSERT INTO prices VALUES (4, 5);
+INSERT INTO prices VALUES (5, 3);
+INSERT INTO prices VALUES (6, 2);
+INSERT INTO prices VALUES (7, 10);
+SELECT s.id, s.name, s.amount, s.maavar, p.price FROM shopping s JOIN
+prices p ON s.id=p.id
+//Displays all columns from the two selected tables
 
-19
-COUNT price unit and mount 
+19SELECT s.id, s.name, s.amount, s.maavar, p.price, s.amount * p.price AS
+"SECRET" FROM shopping s JOIN prices p ON s.id=p.id
+//COUNT price unit and mount 
 
 20
-ID 3 NAME Bread AMOUNT 3 maavar 12 price 12
+SELECT s.id, s.name, s.amount, s.maavar, p.price FROM shopping s JOIN
+prices p ON s.id=p.id WHERE p.price = (SELECT MAX(price) FROM
+prices) // ID 3 NAME Bread AMOUNT 3 maavar 12 price 12
+
+
 
 21
 
