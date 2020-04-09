@@ -1,0 +1,13 @@
+3.Find customers without orders
+
+SELECT C.name
+FROM Customer AS C LEFT JOIN ORDERS AS O ON C.ID = O.CUSTOMER_ID
+WHERE O.CUSTOMER_ID IS NULL
+
+
+
+10.Find the items that were not bought at all
+
+SELECT P.name AS PRODUCT_NAME
+FROM Products AS P LEFT JOIN ORDERS AS O ON P.ID = O.PRODUCT_ID
+WHERE O.PRODUCT_ID IS NULL
