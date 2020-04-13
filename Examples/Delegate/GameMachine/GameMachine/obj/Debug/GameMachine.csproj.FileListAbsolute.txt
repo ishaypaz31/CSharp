@@ -1,0 +1,6 @@
+C:\Users\USER\source\repos\GameMachine\GameMachine\bin\Debug\GameMachine.exe.config
+C:\Users\USER\source\repos\GameMachine\GameMachine\bin\Debug\GameMachine.exe
+C:\Users\USER\source\repos\GameMachine\GameMachine\bin\Debug\GameMachine.pdb
+C:\Users\USER\source\repos\GameMachine\GameMachine\obj\Debug\GameMachine.csprojAssemblyReference.cache
+C:\Users\USER\source\repos\GameMachine\GameMachine\obj\Debug\GameMachine.exe
+C:\Users\USER\source\repos\GameMachine\GameMachine\obj\Debug\GameMachine.pdb
