@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//delegate,Invoke,Action ,Func
 namespace MultiThreaded37
 {
     public class SimpleCalculator
