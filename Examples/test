@@ -1,0 +1,90 @@
+            /*
+             * 1.1 dog form animals 
+                    bulldog from dog
+                    cat from animals
+                    siamese_cat from cat
+                    bird from animals
+
+                    1.2
+                    yes
+
+                    2. no 
+
+                    3.yes
+
+                    4.yes
+
+                    5.no
+
+                    6.yes
+
+                    7.yes all public
+                     interface cannot use modifier 
+
+                    8.
+                    public - open for everyone
+                    private - same class only
+                    protected (same assembly) - same class , derived class  
+                    protected (different assembly) - derived class  
+                    internal (same assembly) - same class , derived class  , other class
+
+
+                    9. no , no
+
+                    10.
+                    overload
+                    override
+                    override
+
+                    11.
+                    option c
+
+                    12.
+                    option c
+
+
+                    ------------------------------------------------------------------------------------
+
+                    13. static class no instance is required
+                    non static class 
+                    instance needed for access
+
+                    14.
+                    ???
+
+                    15.
+                    ???
+
+                    16.
+                    ???
+
+                    17.
+                    ???
+
+                    18.
+                    ???
+
+                    19.
+                    ???
+
+                    20.
+                    ???
+
+                    21.
+                    ???
+
+                    22.
+                    ???
+
+                    23.
+                    IComparable 
+
+                    24.
+                    IComparable IComparer.
+
+                    25.
+                    ???
+
+                    part 2
+                    ???????????????????????????????
+                                    */
